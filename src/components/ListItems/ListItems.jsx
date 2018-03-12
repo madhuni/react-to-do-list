@@ -1,14 +1,17 @@
 import React from 'react';
-import ListItem from './ListItem/ListItem';
+import FlipMove from 'react-flip-move';
 
-const createTasks = (item) => {
-  return (
-    <ListItem key={item.key} text={item.text} />
-  );
-};
+import ListItem from './ListItem/ListItem';
+import './ListItems.css';
 
 const listItems = (props) => {
   const items = props.items;
+
+  const createTasks = (item) => {
+    return (
+      <ListItem key={item.key} text={item.text} deleteItem={props.deleteItem} keyValue={item.key}/>
+    );
+  };
 
   /**
    * Same thing can be done using the advanced 'map' function
@@ -20,7 +23,7 @@ const listItems = (props) => {
    */
   const toDoList = items.map(createTasks);
 
-  console.log(toDoList);
+  // console.log(toDoList);
 
   /**
    * In the below method we looped through the array and created new 'ListItem'
@@ -37,7 +40,9 @@ const listItems = (props) => {
 
   return(
     <ul className="list">
-      {toDoList}
+      <FlipMove duration={300} easing="ease-out">
+        {toDoList}
+      </FlipMove>
     </ul>
   );
 };

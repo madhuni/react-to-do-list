@@ -44,11 +44,31 @@ class ToDoList extends Component {
     }
   }
 
+  /* Method to delete the list item */
+  deleteItem = (key) => {
+    const filteredItems = this.state.listItems.filter((item) => {
+      return (item.key !== key);
+    });
+
+    this.setState({
+      listItems: filteredItems
+    });
+  }
+
   render() {
+    var styles = {
+      diplay: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      width: 500,
+      textAlign: 'center'
+    };
+
     return (
-      <div className="todolist-container">
+      <div className="todolist-container" style={styles}>
         <InputForm setRef={this.setRef} addItems={this.addItems}/>
-        <ListItems items={this.state.listItems}/>
+        <ListItems items={this.state.listItems} deleteItem={this.deleteItem}/>
       </div>
     );
   }
