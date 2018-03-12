@@ -1,0 +1,29 @@
+.form-input {
+  font-size: 16px;
+  padding: 10px;
+  border: 2px solid #fff;
+  width: 430px;
+}
+
+input::placeholder {
+  font-family: monospace;
+  color: #adadad;
+}
+
+.submit-btn {
+  text-align: center;
+  width: 50px;
+  font-size: 16px;
+  padding: 10px;
+  border: 2px solid #0066FF;
+  background-color: #0066FF;
+  margin: 20px 0 20px 20px;
+  color: white;
+  transition: all .2s ease-out;
+}
+
+.submit-btn:hover {
+  background-color: #003399;
+  border: 2px solid #003399;
+  cursor: pointer;
+}

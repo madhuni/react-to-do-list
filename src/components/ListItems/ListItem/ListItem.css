@@ -1,0 +1,58 @@
+.list-item {
+  font-size: 20px;
+  padding: 10px;
+  color: #333;
+  background-color: rgba(255,255,255,.5);
+  border-radius: 5px;
+  text-align: left;
+
+  transition: background-color .2s ease-out;
+  animation: listIn .4s ease-out;
+}
+
+.list-item:hover {
+  background-color: pink;
+  cursor: pointer;
+}
+
+.list-item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.item-text {
+  overflow: hidden;
+  overflow-wrap: break-word;
+}
+
+.item-removes {
+  animation: listOut .2s ease-out;
+}
+
+@keyframes listIn {
+  0% {
+    opacity: 0;
+    transform: scale(0, 0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2, 1.2);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes listOut {
+  0% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0, 0);
+  }
+}
