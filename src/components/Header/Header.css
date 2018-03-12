@@ -1,0 +1,14 @@
+.header {
+  margin: 0 0 40px;
+  background-color: #333;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 3px solid #fffcfc;
+}
+
+.header__heading {
+  margin: 0;
+  font-size: 40px;
+}
