@@ -1,0 +1,14 @@
+.ip-address-container {
+  text-align: center;
+  color: #333;
+}
+
+.ip-address {
+  font-size: 35px;
+  margin: 0 0 10px;
+}
+
+.msg {
+  font-size: 15px;
+  color: gray;
+}

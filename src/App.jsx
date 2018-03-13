@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import ToDoList from './containers/ToDoList';
 import Header from './components/Header/Header';
+import IpAddressContainer from './containers/IpAddressContainer';
 import Aux from './hoc/Aux';
 
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
     return (
       <Aux>
         <Header />
+        <IpAddressContainer />
         <div id="app" style={styles}>
           <ToDoList />
         </div>
